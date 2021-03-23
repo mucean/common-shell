@@ -28,8 +28,8 @@ function os_version()
         OS=$(uname -s)
         VER=$(uname -r)
     fi
-    echo "OS=$OS"
-    echo "OS_VER=$VER"
+    echo "OS=\"$OS\""
+    echo "OS_VER=\"$VER\""
 }
 
 eval "$(os_version)"
@@ -43,4 +43,3 @@ function is_arch()
 {
     [[ $(tr "[:lower:]" "[:upper:]" <<< "$OS") =~ "ARCH" ]]
 }
-
