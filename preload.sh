@@ -2,6 +2,7 @@
 
 # shellcheck source=/dev/null
 source "$HOME/.common-shell/os.sh"
+source "$HOME/.common-shell/proxy.sh"
 
 cmd_exist() {
     path="$(type -p "$1")" && [ -x "$path" ]
