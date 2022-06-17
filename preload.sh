@@ -34,3 +34,9 @@ function sudo_passwd() {
     echo "$sudo_pw"
 }
 
+# https://stackoverflow.com/questions/59895/how-can-i-get-the-source-directory-of-a-bash-script-from-within-the-script-itsel
+script_full_dir() {
+    SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]:-$0}";  )" &> /dev/null && pwd 2> /dev/null;  )";
+    echo $SCRIPT_DIR;
+}
+
